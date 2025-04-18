@@ -1,5 +1,9 @@
 flask
 torch
-diffusers
+torchvision
+torchaudio
+diffusers[torch]
 transformers
-pillow
+huggingface_hub
+nest_asyncio
+Pillow
