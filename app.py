@@ -8,8 +8,7 @@ from PIL import Image
 app = Flask(__name__)
 
 # Load model
-pipeline = StableDiffusionPipeline.from_pretrained("CompVis/stable-diffusion-v1-4", torch_dtype=torch.float32)
-pipeline.to("cpu")  # Change to 'cuda' if you're deploying to GPU
+pipeline = StableDiffusionPipeline.from_pretrained("CompVis/stable-diffusion-v1-4", torch_dtype=torch.float16)
 
 @app.route("/", methods=["GET"])
 def index():
